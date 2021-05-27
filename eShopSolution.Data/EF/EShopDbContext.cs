@@ -29,6 +29,7 @@ namespace eShopSolution.Data.EF
             modelBuilder.ApplyConfiguration(new ProductTranslationConfiguration());
             modelBuilder.ApplyConfiguration(new PromotionConfiguration());
             modelBuilder.ApplyConfiguration(new TransactionConfiguration());
+            modelBuilder.ApplyConfiguration(new ProductImageConfiguration());
 
             //data seeding
             modelBuilder.Seed();
@@ -59,5 +60,7 @@ namespace eShopSolution.Data.EF
         public DbSet<Promotion> Promotions { get; set; }
 
         public DbSet<Transaction> Transactions { get; set; }
+        public DbSet<ProductInCategory> ProductInCategory { get; set; }
+        public DbSet<ProductImage> ProductImages { get; set; }
     }
 }
